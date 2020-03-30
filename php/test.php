@@ -19,6 +19,6 @@
         <li style="color: green;">Texte en vert</li>
         </ul>
         
-        <p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i:s'); ?>.</p>
+        <p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i:s'); ?></p>
     </body>
 </html>
