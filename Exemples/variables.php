@@ -1,10 +1,10 @@
-<?php   
-$ageDuVisiteur=20;
-echo'le visiteur a '.  $ageDuVisiteur .    ' ans.';
+<?php
+$ageDuVisiteur = 20;
+echo 'le visiteur a ' .  $ageDuVisiteur .    ' ans.';
 echo "<br/>";
-$prix =23;
-$quantite=10;
-echo'cela coute '.$quantite*$prix.'  euros.';
+$prix = 23;
+$quantite = 10;
+echo 'cela coute ' . $quantite * $prix . '  euros.';
 
 
 ?>
@@ -13,12 +13,9 @@ $age = 8;
 $langue = "anglais";
 
 //les 2 conditions doivent etre validees
-if ($age <= 12 AND $langue == "français")
-{
+if ($age <= 12 and $langue == "français") {
     echo "Bienvenue sur mon site !";
-}
-elseif ($age <= 12 AND $langue == "anglais")
-{
+} elseif ($age <= 12 and $langue == "anglais") {
     echo "Welcome to my website!";
 }
 ?>
@@ -27,8 +24,7 @@ elseif ($age <= 12 AND $langue == "anglais")
 // test sans les  accolades
 $variable = 23;
 
-if ($variable == 23)
-{
+if ($variable == 23) {
     echo '<strong>Bravo !</strong> Vous avez trouvé le nombre mystère !';
 }
 ?>
@@ -38,10 +34,9 @@ if ($variable == 23)
 //test avec les accolades
 $variable = 23;
 
-if ($variable == 23)
-{
+if ($variable == 23) {
 ?>
-<strong>Bravo !</strong> Vous avez trouvé le nombre mystère !
+    <strong>Bravo !</strong> Vous avez trouvé le nombre mystère !
 <?php
 }
 ?>
@@ -52,43 +47,21 @@ if ($variable == 23)
 // test code avec des if
 $note = 16;
 
-if ($note == 0)
-{
+if ($note == 0) {
     echo "Tu es vraiment un gros nul !!!";
-}
-
-elseif ($note == 5)
-{
+} elseif ($note == 5) {
     echo "Tu es très mauvais";
-}
-
-elseif ($note == 7)
-{
+} elseif ($note == 7) {
     echo "Tu es mauvais";
-}
-
-elseif ($note == 10)
-{
+} elseif ($note == 10) {
     echo "Tu as pile poil la moyenne, c'est un peu juste…";
-}
-
-elseif ($note == 12)
-{
+} elseif ($note == 12) {
     echo "Tu es assez bon";
-}
-
-elseif ($note == 16)
-{
+} elseif ($note == 16) {
     echo "Tu te débrouilles très bien !";
-}
-
-elseif ($note == 20)
-{
+} elseif ($note == 20) {
     echo "Excellent travail, c'est parfait !";
-}
-
-else
-{
+} else {
     echo "Désolé, je n'ai pas de message à afficher pour cette note";
 }
 ?>
@@ -98,36 +71,35 @@ else
 //test code avec  switch
 $note = 10;
 // on indique sur quelle variable on travaille
-switch ($note) 
-{ 
+switch ($note) {
     case 0: // dans le cas où $note vaut 0
         echo "Tu es vraiment un gros nul !!!";
-    break;
-    
+        break;
+
     case 5: // dans le cas où $note vaut 5
         echo "Tu es très mauvais";
-    break;
-    
+        break;
+
     case 7: // dans le cas où $note vaut 7
         echo "Tu es mauvais";
-    break;
-    
+        break;
+
     case 10: // c est juste
         echo "Tu as pile poil la moyenne, c'est un peu juste…";
-    break;
-    
+        break;
+
     case 12:
         echo "Tu es assez bon";
-    break;
-    
+        break;
+
     case 16:
         echo "Tu te débrouilles très bien !";
-    break;
-    
+        break;
+
     case 20:
         echo "Excellent travail, c'est parfait !";
-    break;
-    
+        break;
+
     default:
         echo "Désolé, je n'ai pas de message à afficher pour cette note";
 }
@@ -141,13 +113,10 @@ switch ($note)
 // la c est la condition classique
 $age = 15;
 
-if ($age >= 18)
-{
-	$majeur = true;
-}
-else
-{
-	$majeur = false;
+if ($age >= 18) {
+    $majeur = true;
+} else {
+    $majeur = false;
 }
 ?>
 

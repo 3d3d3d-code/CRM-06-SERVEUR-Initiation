@@ -1,11 +1,10 @@
 <?php
 
 
-$repetition=0;
-while($repetition<10){
-    echo' <p> je ne dois pas copier sur mon voisin ' . $repetition  .' fois.  </p>';
+$repetition = 0;
+while ($repetition < 10) {
+    echo ' <p> je ne dois pas copier sur mon voisin ' . $repetition  . ' fois.  </p>';
     $repetition++;
-
 }
 
 ?>
@@ -15,13 +14,11 @@ while($repetition<10){
 <?php
 
 
-for($repetition=0;$repetition<10;$repetition++){
+for ($repetition = 0; $repetition < 10; $repetition++) {
 
-    echo' <p> je ne dois pas copier sur mon voisin ' . $repetition  .' fois.  </p>';
-
+    echo ' <p> je ne dois pas copier sur mon voisin ' . $repetition  . ' fois.  </p>';
 }
 
 
 
 ?>
-

@@ -72,15 +72,15 @@ $coordonnees = array(
   'couleur' => 'bleue'
 );
 
-if(array_key_exists('couleur',$coordonnees)){
+if (array_key_exists('couleur', $coordonnees)) {
 
 
 
-  echo'la cle "couleur" se trouve bien la';
+  echo 'la cle "couleur" se trouve bien la';
 }
-if(array_search('taille',$coordonnees)){
+if (array_search('taille', $coordonnees)) {
 
-  echo'la taille est de' ."taille";
+  echo 'la taille est de' . "taille";
 }
 
 
