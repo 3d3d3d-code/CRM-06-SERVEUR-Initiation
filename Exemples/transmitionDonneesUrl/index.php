@@ -9,7 +9,7 @@
 </body>
 
 <p>
-    <a href="bonjour.php?nom=hamza&amp;prenom=reda">dis moi bonjour</a>
+   / <a href="bonjour.php?nom=hamza&amp;prenom=reda">dis moi bonjour</a>
 </p>
 
 </HTml:5>
