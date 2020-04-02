@@ -15,7 +15,7 @@
 
 echo htmlspecialchars($_POST['nom']).' '.  htmlspecialchars($_POST['email']);
 
-?> !
+?> 
 
 
 
