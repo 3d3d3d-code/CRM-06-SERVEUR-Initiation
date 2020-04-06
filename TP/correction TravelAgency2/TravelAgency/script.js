@@ -31,11 +31,12 @@ function resetForm() {
     document.getElementById("email").value = "";
     document.getElementById("name").value = "";
 }
-
+ /**
 function checkValidForm(nom, email) {
     if (nom != "" && email != "") {
         document.getElementById("button-ok").disabled = false;
     } else {
         document.getElementById("button-ok").disabled = true;
     }
+**/
 }
