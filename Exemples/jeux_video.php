@@ -11,17 +11,7 @@
 
 
 
-<?php
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=test', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-
-$reponse = $bdd->prepare('SELECT LENGTH(nom) AS longueur,console,prix FROM jeuxv_video where console =?');
-$requete->exec(array ($_GET['console']));
-while ($donnees = $reponse->fetch()) {
-
-    echo '<p>' . $donnees['longueur'] . ' sur console ' . $donnees['console'] . 'au prix de' . $donnees['prix'] . 'euros' . '</p>';
-}
-?>
 
 <!-- FAIRE UNE REQUETE PREPAREE-->
 <?php

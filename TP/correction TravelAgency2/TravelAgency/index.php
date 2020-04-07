@@ -111,7 +111,7 @@
                     <input type="text" id="name" name="name" placeholder="Votre nom" onchange="checkInputName(this.value)">
                     <label for="email">Email</label><sup><span style="color : red">*</span></sup>
                     <input type="text" id="email" name="email" placeholder="Votre email" onchange="checkInputEmail(this.value)">
-                    <input type="submit" value="OK" id="button-ok" class="button-3"  disabled="disabled">
+                    <input type="submit" value="OK" id="button-ok" class="button-3" >
                 </form>
 
          
@@ -127,7 +127,7 @@
     </footer>
 
 
-    <script src="script.js"></script>
+   <!-- <script src="script.js"></script>-->
 </body>
 
 </html>
