@@ -1,42 +1,33 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=listing, initial-scale=1.0">
-    <title>listing</title>
-</head>
-<body>
-
-
 <?php
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=travelagency;charset=utf8', 'root', '');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
+// Connexion à la base de données
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=travelagency;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
 }
 
-$bdd->exec('SELECT *FROM travelagency');
-
-// Ajout d'une entree dans la table jeux_video:
-$bdd->exec('INSERT INTO listcontact(nom, email, datetime, etat)VALUES(\'john\', \'john@gmail.com\', \'now()\',\'o\')');
-
-echo 'ligne ok !';
-
-?>
-    
-</body>
-</html>
 
 
+if (isset($_GET['prenom']) and isset($_GET['nom']) ) 
+{
+    $nbRepetition = (int) $_GET['repeter'];
 
-
-
-
-
-
-
-
+    if ($nbRepetition < 3) {
+       for ($repetition = 0; $repetition <= $nbRepetition; $repetition++) {
+          echo  ' bonjour '  . $_GET['prenom'].$_GET['nom'];
+       }
+    }
+ } else{
+    echo 'remplissez les champs svp !';
  
+}
+// Insertion du message à l'aide d'une requête préparée
+$req = $bdd->prepare('INSERT INTO listing (prenom, nom,email) VALUES(?,?,?)');
+$req->execute(array($_POST['prenom'], $_POST['nom'] , $_GET['email']));
 
-
+// Redirection du visiteur vers la page du minichat
+header('Location:http://localhost/CRM-06-SERVEUR-Initiation/TP/correction%20TravelAgency2/TravelAgency/contact.php');
+?>
