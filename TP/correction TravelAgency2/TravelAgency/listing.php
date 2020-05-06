@@ -11,23 +11,21 @@ catch(Exception $e)
 
 
 
-if (isset($_GET['prenom']) and isset($_GET['nom']) ) 
+if (isset($_POST['login']) and isset($_POST['mdp']) ) 
 {
-    $nbRepetition = (int) $_GET['repeter'];
+    // Insertion du message à l'aide d'une requête préparée
 
-    if ($nbRepetition < 3) {
-       for ($repetition = 0; $repetition <= $nbRepetition; $repetition++) {
-          echo  ' bonjour '  . $_GET['prenom'].$_GET['nom'];
-       }
-    }
+   $req = $bdd->prepare('SELECT  login,mdp FROM admin(?,?)');
+   $req->execute(array($_POST['login'], $_POST['mdp'] ));
+  
+    
  } else{
     echo 'remplissez les champs svp !';
- 
+  
 }
-// Insertion du message à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO listing (prenom, nom,email) VALUES(?,?,?)');
-$req->execute(array($_POST['prenom'], $_POST['nom'] , $_GET['email']));
 
-// Redirection du visiteur vers la page du minichat
-header('Location:http://localhost/CRM-06-SERVEUR-Initiation/TP/correction%20TravelAgency2/TravelAgency/contact.php');
+
+$reponse = $bdd->query('SELECT nom,email,ajout_date,etat  FROM listing ');
+//bouton de retour
+
 ?>
